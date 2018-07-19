@@ -1,0 +1,1999 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VTS.Common</name>
+    </assembly>
+    <members>
+        <member name="T:VTS.Common.BonkerZip">
+            <summary>
+            压缩文件
+            缺陷：修改了原始DLL的MD5值
+            </summary>
+        </member>
+        <member name="M:VTS.Common.BonkerZip.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VTS.Common.BonkerZip.AddFile(System.String)">
+            <summary>
+            添加压缩文件
+            </summary>
+            <param name="_fileAbsolutePath">文件的绝对路径</param>
+        </member>
+        <member name="M:VTS.Common.BonkerZip.CompressionZip(System.String)">
+            <summary>
+            压缩文件或者文件夹
+            </summary>
+            <param name="_depositPath">压缩后文件的存放路径 如C:\\windows\abc.zip</param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.BonkerZip.ZipFloder(System.String,ICSharpCode.SharpZipLib.Zip.ZipOutputStream,System.String)">
+            <summary>
+            压缩文件夹
+            </summary>
+            <param name="_OfloderPath"></param>
+            <param name="zos"></param>
+            <param name="_floderPath"></param>
+        </member>
+        <member name="M:VTS.Common.BonkerZip.DeCompressionZip(System.String,System.String)">
+            <summary>
+            解压
+            </summary>
+            <param name="_depositPath">压缩文件路径</param>
+            <param name="_floderPath">解压的路径</param>
+            <returns></returns>
+        </member>
+        <member name="P:VTS.Common.BonkerZip.AbsolutePaths">
+            <summary>
+            存放待压缩的文件的绝对路径
+            </summary>
+        </member>
+        <member name="P:VTS.Common.BonkerZip.ErrorMsg">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="T:VTS.Common.CompressionSnippet">
+            <summary>
+            CompressionSnippet
+            </summary>
+        </member>
+        <member name="M:VTS.Common.CompressionSnippet.CompressFile(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="sourceFilePath"></param>
+            <param name="destinationFilePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.CompressionSnippet.UncompressFile(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="path"></param>
+        </member>
+        <member name="T:VTS.Common.CHS2PinYin">
+            <summary>
+            汉字转拼音工具
+            </summary>
+        </member>
+        <member name="F:VTS.Common.CHS2PinYin.pv">
+            <summary>
+            包含字符 ASC 码的整形数组
+            </summary>
+        </member>
+        <member name="F:VTS.Common.CHS2PinYin.ps">
+            <summary>
+            包含汉字拼音的字符串数组
+            </summary>
+        </member>
+        <member name="F:VTS.Common.CHS2PinYin.bd">
+            <summary>
+            包含要排除处理的字符的字符串数组
+            </summary>
+        </member>
+        <member name="M:VTS.Common.CHS2PinYin.Convert(System.String,System.String,System.Boolean)">
+            <summary>
+            将指定中文字符串转换为拼音形式
+            </summary>
+            <param name="chs">要转换的中文字符串</param>
+            <param name="separator">连接拼音之间的分隔符</param>
+            <param name="initialCap">指定是否将首字母大写</param>
+            <returns>包含中文字符串的拼音的字符串</returns>
+        </member>
+        <member name="M:VTS.Common.CHS2PinYin.Convert(System.String,System.String)">
+            <summary>
+            将指定中文字符串转换为拼音形式
+            </summary>
+            <param name="chs">要转换的中文字符串</param>
+            <param name="separator">连接拼音之间的分隔符</param>
+            <returns>包含中文字符串的拼音的字符串</returns>
+        </member>
+        <member name="M:VTS.Common.CHS2PinYin.Convert(System.String,System.Boolean)">
+            <summary>
+            将指定中文字符串转换为拼音形式
+            </summary>
+            <param name="chs">要转换的中文字符串</param>
+            <param name="initialCap">指定是否将首字母大写</param>
+            <returns>包含中文字符串的拼音的字符串</returns>
+        </member>
+        <member name="M:VTS.Common.CHS2PinYin.Convert(System.String)">
+            <summary>
+            将指定中文字符串转换为拼音形式
+            </summary>
+            <param name="chs">要转换的中文字符串</param>
+            <returns>包含中文字符串的拼音的字符串</returns>
+        </member>
+        <member name="P:VTS.Common.CHS2PinYin.Phrase">
+            <summary>
+            设置或获取包含列外词组读音的键/值对的组合
+            </summary>
+        </member>
+        <member name="T:VTS.Common.ImportData">
+            <summary>
+            Txt，Excel文件转换List类
+            通过抽象的方式完成了封装,不管外面使用什么格式的数据都使用一个方法进行搞定
+            </summary>
+        </member>
+        <member name="M:VTS.Common.ImportData.LoadDataFromfile(System.String,System.String[])">
+            <summary>
+            从文件中加载数据
+            </summary>
+            <param name="strFilePath">文件的路径</param>
+            <param name="par">工作薄的名字</param>
+            <returns></returns>
+        </member>
+        <member name="T:VTS.Common.IDataImport">
+            <summary>
+            接口
+            </summary>
+        </member>
+        <member name="M:VTS.Common.IDataImport.GetDataFromFile(System.String,System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="strPath"></param>
+            <param name="arrp"></param>
+            <returns></returns>
+        </member>
+        <member name="T:VTS.Common.ClassText">
+            <summary>
+            文本导入类
+            </summary>
+        </member>
+        <member name="M:VTS.Common.ClassText.GetDataFromFile(System.String,System.String[])">
+            <summary>
+            加载文本数据部分 .txt格式
+            </summary>
+            <param name="filePath"></param>
+            <param name="arrp"></param>
+            <returns></returns>
+        </member>
+        <member name="T:VTS.Common.ClassExcel2003">
+            <summary>
+            2003Excel导入
+            </summary>
+        </member>
+        <member name="M:VTS.Common.ClassExcel2003.GetDataFromFile(System.String,System.String[])">
+            <summary>
+            加载2003Excel的文本数据
+            </summary>
+            <param name="strExcel"></param>
+            <param name="arrp"></param>
+            <returns></returns>
+        </member>
+        <member name="T:VTS.Common.ClassExcel2007">
+            <summary>
+            2007Excel导入
+            </summary>
+        </member>
+        <member name="M:VTS.Common.ClassExcel2007.GetDataFromFile(System.String,System.String[])">
+            <summary>
+            加载2007Excel的文本数据
+            </summary>
+            <param name="strExcel"></param>
+            <param name="arrp"></param>
+            <returns></returns>
+        </member>
+        <member name="T:VTS.Common.RandomCode">
+            <summary>
+            指定长度的随机字符串
+            </summary>
+        </member>
+        <member name="F:VTS.Common.RandomCode.rep">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:VTS.Common.RandomCode.GenerateCheckCode(System.Int32)">
+            <summary>
+            生成随机字母字符串(数字字母混和)
+            </summary>
+            <param name="codeCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.RandomCode.GenerateCheckCodeNum(System.Int32)">
+            <summary>
+            生成随机数字字符串
+            </summary>
+            <param name="codeCount"></param>
+            <returns></returns>
+        </member>
+        <member name="T:VTS.Common.CNHelper">
+            <summary>
+            中文处理助手
+            </summary>
+        </member>
+        <member name="M:VTS.Common.CNHelper.GetChineseSpell(System.String,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="strText"></param>
+            <param name="IsToUpper"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.CNHelper.CheckEnChar(System.String)">
+            <summary>
+            检测中文字符
+            </summary>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.CNHelper.GetSpell(System.String)">
+            <summary>
+            获得中文字符的首字母
+            </summary>
+            <param name="cnChar"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.CNHelper.ConvetTo16(System.String)">
+            <summary>
+            中文转16进制
+            </summary>
+            <param name="cnChar"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.CNHelper.ConvertToCN(System.String)">
+            <summary>
+            16进制转中文
+            </summary>
+            <param name="strUnicode"></param>
+            <returns></returns>
+        </member>
+        <member name="T:VTS.Common.VTSExcelVersions">
+            <summary>
+            Excel版本
+            </summary>
+        </member>
+        <member name="F:VTS.Common.VTSExcelVersions.Excel8">
+            <summary>
+            Excel8.0版文档格式，适用于Microsoft Excel 8.0 (98-2003) 工作簿
+            </summary>
+        </member>
+        <member name="F:VTS.Common.VTSExcelVersions.Excel12">
+            <summary>
+            Excel12.0版文档格式，适用于Microsoft Excel 12.0 (2007) 工作簿
+            </summary>
+        </member>
+        <member name="T:VTS.Common.VTSCommon">
+            <summary>
+            通用函数
+            </summary>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.DisplayTxtContent(System.String)">
+            <summary>
+            txt之读取txt文件显示输出
+            </summary>
+            <param name="filePath">文件的路径</param>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.LoadTextToList(System.String,System.Boolean)">
+            <summary>
+            txt之将txt中的数据变为个List
+            </summary>
+            <param name="filePath">文本的路径</param>
+            <param name="bl">是否去除掉文本中的空格,txt,js html文件</param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.LoadTextToStack(System.String,System.Boolean)">
+            <summary>
+            txt之txt中的数据加载到Stack里面
+            </summary>
+            <param name="filePath">文件的路径</param>
+            <param name="bl">是否去除掉空格</param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.ReadTextToendByDefault(System.String)">
+            <summary>
+            读取一个文件并返回全部的内容
+            </summary>
+            <param name="filePath">文本文件的地址</param>
+            <returns>文本文件的全部内容,使用默认的编码格式</returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.ReadTextToendByDefault(System.String,System.Text.Encoding)">
+            <summary>
+            读取一个文件并返回全部的内容
+            </summary>
+            <param name="filePath">文本文件的地址</param>
+            <param name="coding">使用什么编码格式读取</param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.ReadTextToendByUTF8(System.String)">
+            <summary>
+            以UTF-8的形式读取文件内容并全部返回
+            OpenText打开方式
+            </summary>
+            <param name="strPath">文本的路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.ErgodicDataTable(System.Data.DataTable)">
+            <summary>
+            遍历一个DataTable
+            </summary>
+            <param name="dt"></param>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.ExcelToDataTable(System.String,System.String)">
+            <summary>
+            读取excel文件获得DataTable
+            </summary>
+            <param name="strExcelFileName">目标Excel文件完全路径</param>
+            <param name="strSheetName">工作表的名字</param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.ExcelToDataTable(System.String,System.String,VTS.Common.VTSExcelVersions)">
+            <summary>
+            读取excel文件获得DataTable
+            </summary>
+            <param name="strExcelFileName"></param>
+            <param name="strSheetName"></param>
+            <param name="exVersions"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.ExcelToDataReader(System.String,System.String)">
+            <summary>
+            读取excel文件获得DataReader
+            </summary>
+            <param name="strExcelFileName"></param>
+            <param name="strSheetName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.ParseTags(System.String)">
+            <summary>   
+            移除HTML标签   
+            </summary>   
+            <param name="HTMLStr">HTMLStr</param>   
+        </member>
+        <member name="M:VTS.Common.VTSCommon.DropHTML(System.String)">
+            <summary>
+            清除html脚本文件。稳定的版本
+            </summary>
+            <param name="Htmlstring"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.StripHTML(System.String)">
+            <summary>   
+            将所有HTML标签替换成""   
+            </summary>   
+            <param name="strHtml"></param>   
+            <returns></returns>   
+        </member>
+        <member name="M:VTS.Common.VTSCommon.GetHtmlImageUrlList(System.String)">
+            <summary> 
+            获得HTML中所有图片的src地址【比较稳定的一个版本】
+            </summary> 
+            <param name="sHtmlText">HTML代码</param> 
+            <returns>图片的URL列表</returns> 
+        </member>
+        <member name="M:VTS.Common.VTSCommon.GetHtmlImageUrlListV2(System.String)">
+            <summary> 
+            取得HTML中所有图片的 URL。 
+            </summary> 
+            <param name="sHtmlText">HTML代码</param> 
+            <returns>图片的URL列表</returns> 
+        </member>
+        <member name="M:VTS.Common.VTSCommon.GetImgUrl(System.String)">
+            <summary>   
+            取出文本中的图片地址   
+            </summary>   
+            <param name="HTMLStr">HTMLStr</param>   
+        </member>
+        <member name="M:VTS.Common.VTSCommon.GetExtension(System.String,System.String)">
+            <summary>
+            获得字符串中的扩展名,获取不到是“.jpg”
+            </summary>
+            <param name="strInput">字符串</param>
+            <param name="defaultext">默认扩展名</param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.GetNumber(System.String)">
+            <summary>
+            解析出字符串中的数字
+            </summary>
+            <param name="strInput"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.IsOdd(System.Int32)">
+            <summary>
+            奇数偶数判断
+            </summary>
+            <param name="n"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.DateDiff(System.DateTime,System.DateTime)">
+            <summary>
+            DateTime操作计算时间的差值
+            计算两个时间相差多少天多少小时多少分钟
+            </summary>
+            <param name="DateTime1"></param>
+            <param name="DateTime2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.DateDiff(System.DateTime,System.DateTime,System.String)">
+            <summary>   
+            返回两个日期之间的时间间隔（y：年份间隔、M：月份间隔、d：天数间隔、h：小时间隔、m：分钟间隔、s：秒钟间隔、ms：微秒间隔）   
+            </summary>   
+            <param   name="Date1">开始日期</param>   
+            <param   name="Date2">结束日期</param>   
+            <param   name="Interval">间隔标志</param>   
+            <returns>返回间隔标志指定的时间间隔</returns>   
+        </member>
+        <member name="M:VTS.Common.VTSCommon.WriteLog(System.String)">
+            <summary>
+            写入日志
+            </summary>
+            <param name="strURL"></param>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.SetLog(System.String,System.String)">
+            <summary>
+            跟踪数据
+            </summary>
+            <param name="logPath"></param>
+            <param name="strContent"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.TraceLog(System.String,System.String,System.Boolean,System.Text.Encoding)">
+            <summary>
+            跟踪数据
+            </summary>
+            <param name="data">写入的数据</param>
+            <param name="filePath">日志文件路径</param>
+            <param name="isAddtime">是否追加时间</param>
+            <param name="coding">编码</param>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.GetDirFile(System.String,System.String,System.Boolean)">
+            <summary>
+            获取指定目录下的指定类型的文件信息.
+            只支持一级目录下的文件的获取
+            </summary>
+            <param name="strDir">目录路径</param>
+            <param name="strFileType">文件类型【*.txt】</param>
+            <param name="bl">是否返回完全的路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.GetDir(System.String,System.Boolean)">
+            <summary>
+            获得指定目录下所有的目录信息。
+            </summary>
+            <param name="strDir">目标目录</param>
+            <param name="bl">是否获得完整的路径呢?</param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.IsSubDir(System.String)">
+            <summary>
+            判断目录下是否有子目录
+            </summary>
+            <param name="strDir"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.CreateDir(System.String)">
+            <summary>
+            创建一个目录.创建时会删除同名目录,所以目录下不能有文件
+            </summary>
+            <param name="directoryPath"></param>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.DeleteFolder(System.String)">
+            <summary>
+            删除目录下的所有子目录和文件
+            </summary>
+            <param name="dir">目录路径</param>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.CopyFile(System.String,System.String,System.Boolean)">
+            <summary>
+            复制移动文件
+            </summary>
+            <param name="strSourcefile">源文件路径</param>
+            <param name="strSaveFile">保存文件路径,带扩展名</param>
+            <param name="isMove">是否移动呢</param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.CopyDir(System.String,System.String)">
+            <summary>
+            将指定文件夹下面的所有内容copy到目标文件夹下面
+            </summary>
+            <param name="srcPath">源目录</param>
+            <param name="aimPath">目标目录</param>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.CopyDirectory(System.String,System.String)">
+            <summary>
+            将指定文件夹下面的所有内容copy到目标文件夹下面
+            </summary>
+            <param name="srcPath">源目录</param>
+            <param name="aimPath">目标目录</param>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.CreateFile(System.String)">
+            <summary>
+            创建指定路径指定格式的文件：适用于创建txt,css,js文件,创建之前会删除同名的文件的
+            </summary>
+            <param name="strPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.CreateFile(System.String,System.String)">
+            <summary>
+            创建指定格式的文件并写入内容.如果文件已存在,它将被覆盖.默认的编码
+            </summary>
+            <param name="strContent">写入的文件内容</param>
+            <param name="strGobalPath">保存的路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.CreateFile(System.String,System.String,System.Text.Encoding)">
+            <summary>
+            创建指定格式的文件并写入内容，指定路径，扩展名和编码格式
+            </summary>
+            <param name="strContent">写入的文件内容</param>
+            <param name="strGobalPath">保存的路径</param>
+            <param name="encoding">指定的编码格式</param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.CreateFile(System.String,System.String,System.String,System.String,System.Text.Encoding)">
+            <summary>
+            创建指定格式的文件：该函数会自动创建目录.可以指定编码，不指定的话默认编码
+            </summary>
+            <param name="strContent">写入的文件内容</param>
+            <param name="strDir">保存的目录</param>
+            <param name="strName">保存的文件名</param>
+            <param name="strType">保存的文件类型</param>
+            <param name="encoding">使用的编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.FileToBinary(System.String)">
+            <summary>
+            文件转字符串
+            将传进来的文件转换成Base64字符串
+            适用于比较小的文件,因为Int类型长度的限定
+            </summary>
+            <param name="FilePath">待处理的文件路径(本地或服务器)</param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.BinaryToFile(System.String,System.String)">
+            <summary>
+            字符串转文件
+            将传进来的字符串保存为Base64的文件
+            </summary>
+            <param name="path">需要保存的位置路径</param>
+            <param name="binary">需要转换的字符串</param>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.DownloadFile(System.String,System.String)">
+            <summary>
+            远程下载一个文件
+            使用WebRequest
+            </summary>
+            <param name="stringUrl">下载文件的URL,如:http://www.meileg.com/beautyleg/photo/big/256-Ruby-81/0001.jpg</param>
+            <param name="savefilePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.DownloadFileV2(System.String,System.String)">
+            <summary>
+            远程下载一个文件
+            使用HttpWebRequest对象
+            </summary>
+            <param name="Url">要下载的URL</param>
+            <param name="FileName">要保存的物理地址</param>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.GetLength(System.String)">
+            <summary>
+            返回字符串真实长度, 1个汉字长度为2
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.ToHtml(System.String)">
+            <summary>
+            字符串字符处理
+            把TXT代码转换成HTML格式
+            </summary>
+            <param name="input">等待处理的字符串</param>
+            <returns>处理后的字符串</returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.ToTxt(System.String)">
+            <summary>
+            字符串字符处理
+            把HTML代码转换成TXT格式
+            </summary>
+            <param name="input">等待处理的字符串</param>
+            <returns>处理后的字符串</returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.TextToHtml(System.String)">
+            <summary>
+            Texts to HTML.
+            </summary>
+            <param name="content">The TXT STR.</param>
+            <returns>The formated str.</returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.HtmlToText(System.String)">
+            <summary>
+            HTML to text
+            </summary>
+            <param name="content"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.DelLastComma(System.String)">
+            <summary>
+            删除最后结尾的一个逗号
+            </summary>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.DelLastChar(System.String,System.String)">
+            <summary>
+            删除最后结尾的指定字符后的字符
+            </summary>
+            <param name="str">源字符</param>
+            <param name="strchar">结尾的字符</param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.DelLastString(System.String,System.String)">
+            <summary>
+            删除指定字符后面的所有字符串
+            </summary>
+            <param name="str"></param>
+            <param name="strchar"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.SplitString(System.String,System.String)">
+            <summary>
+            分割字符串
+            内置使用正则表达式实现
+            </summary>
+            <param name="strContent"></param>
+            <param name="strSplit"></param>
+            <returns>分割失败返回源字符串</returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.SplitString(System.String,System.String,System.Int32)">
+            <summary>
+            分割字符串
+            </summary>
+            <param name="strContent"></param>
+            <param name="strSplit"></param>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.StringSplit(System.String,System.String)">
+            <summary>
+            功能：将字符串分割成数组
+            </summary>
+            <param name="strSource">目标字符串</param>
+            <param name="strSplit">分隔符</param>
+            <returns>分割后的字符数组，返回的内容中并不包含所谓的分隔符号</returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.StringSplit(System.String,System.String,System.String[])">
+            <summary>
+            功能：采用递归将字符串分割成数组
+            </summary>
+            <param name="strSource">目标源</param>
+            <param name="strSplit">分割符号</param>
+            <param name="attachArray">附加数组,在最后的结果中出现</param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.StringReplace(System.String,System.String,System.String)">
+            <summary>
+            替换字符串
+            </summary>
+            <param name="strSource">目标字符串</param>
+            <param name="oldStr">要替换的字符串</param>
+            <param name="strNew">替换成</param>
+            <returns>ReplaceString("Hello World!","Hello","Hi")</returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.ReplaceStr(System.String,System.String,System.String)">
+            <summary>
+            替换指定的字符串
+            </summary>
+            <param name="originalStr">原字符串</param>
+            <param name="oldStr">旧字符串</param>
+            <param name="newStr">新字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.WipeoffSChar(System.String)">
+            <summary>
+            【文件命名】去除文件命名中的特殊字符
+            【在对文件重命名的时候非常有用】
+            </summary>
+            <param name="strInput"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.IsCharandDia(System.Char)">
+            <summary>
+            判断字符是否数据应为字母大小写，十进制数字，空白,和"_"
+            </summary>
+            <param name="ch"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.FilterString(System.String,System.Char)">
+            <summary>
+            【文件命名】-【实用版】获得一个可以用作文件命名的字符串
+            </summary>
+            <param name="strInput">要输入的字符串</param>
+            <param name="chc">连字符</param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.Htmls(System.String)">
+            <summary>
+            过滤特殊字符
+            </summary>
+            <param name="Input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.CutString(System.String,System.Int32,System.Int32)">
+            <summary>
+            从字符串的指定位置截取指定长度的子字符串(过时)
+            </summary>
+            <param name="str">原字符串</param>
+            <param name="startIndex">子字符串的起始位置</param>
+            <param name="length">子字符串的长度</param>
+            <returns>子字符串</returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.CutString(System.String,System.Int32)">
+            <summary>
+            从字符串的指定位置开始截取到字符串结尾的了符串
+            </summary>
+            <param name="str"></param>
+            <param name="length"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.CutString(System.String,System.Int32,System.String)">
+            <summary>
+            截取字符
+            </summary>
+            <param name="str"></param>
+            <param name="length"></param>
+            <param name="def"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.CutString(System.String,System.Int32,System.Int32,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="str"></param>
+            <param name="startIndex"></param>
+            <param name="length"></param>
+            <param name="def"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.GetFileName">
+            <summary>
+            获得以当前日期的文件名字
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.GetRandomFileName(System.String)">
+            <summary>
+            得到一个随意的文件名
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.GenerateFileName">
+            <summary>
+            获得以当前日期为文件名字的字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.GenerateDateTimeString">
+            <summary>
+            摘要：获得日期随机码字符串
+            用途：用于上传文件重命名文件
+            注意：如果过快同样也会有重复值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.GenerateGuid">
+            <summary>
+            摘要：获得以Guid方式生成的随机字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.GenerateStringID">
+            <summary>
+            获得一个不重复的字符串
+            据说一亿次数都不重复
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.GenerateIntID">
+            <summary>
+            获得一个不重复的长整型数字
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.GenerateString(System.Int32)">
+            <summary>
+            固定长度的随机字符串
+            </summary>
+            <param name="length">长度</param>
+            <returns>随机串</returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.GenerateString(System.String)">
+            <summary>
+            随机字符串生成算法
+            移除方式得到随机不重复的字符串
+            该算法是字符长度越大随机性就越大【比较好的一个方法】
+            </summary>
+            <param name="input">要输入的字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.GeneratePassWord(System.Int32,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.String)">
+            <summary>
+            获得一个用于生成密码的随机字符串
+            </summary>
+            <param name="length">目标字符串的长度</param>
+            <param name="useNum">是否包含数字，1=包含，默认为包含</param>
+            <param name="useLow">是否包含小写字母，1=包含，默认为包含</param>
+            <param name="useUpp">是否包含大写字母，1=包含，默认为包含</param>
+            <param name="useSpe">是否包含特殊字符，1=包含，默认为不包含</param>
+            <param name="custom">要包含的自定义字符，直接输入要包含的字符列表</param>
+            <returns>指定长度的随机字符串</returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.GetRandomID">
+            <summary>
+            生成随机ID
+            用于购物车ID和订单号ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.StringOfChar(System.Int32,System.String)">
+            <summary>
+            生成指定长度的字符串,即生成strLong个str字符串
+            </summary>
+            <param name="strLong">生成的长度</param>
+            <param name="str">以str生成字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.GetRamCode">
+            <summary>
+            生成日期随机码
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.Number(System.Int32)">
+            <summary>
+            生成随机数字
+            </summary>
+            <param name="length">生成长度</param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.Number(System.Int32,System.Boolean)">
+            <summary>
+            生成随机数字
+            </summary>
+            <param name="Length">生成长度</param>
+            <param name="Sleep">是否要在生成前将当前线程阻止以避免重复</param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.GetCheckCode(System.Int32)">
+            <summary>
+            生成随机字母字符串(数字字母混和)
+            </summary>
+            <param name="codeCount">待生成的位数</param>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.GetOrderNumber">
+            <summary>
+            根据日期和随机码生成订单号
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.Next(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="numSeeds"></param>
+            <param name="length"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.RandCode(System.Int32,System.Boolean)">
+            <summary>
+            生成随机码[未检查]
+            </summary>
+            <param name="length">长度</param>
+            <param name="isLower">是否转化成小写</param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.RandomColor">
+            <summary>
+            生成随机颜色
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.GetRandomString(System.Int32,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            生成随即的字符ID
+            注意：速度快是依然会产生重复数据
+            </summary>
+            <param name="len">长度</param>
+            <param name="ls">不重复ID集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.CharRandom(System.String)">
+            <summary>
+            随机字符串生成算法
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.CheckString(System.String)">
+            <summary>
+            检查字符串是由字母+数字+"-_"组成的
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.CheckObject(System.Object)">
+            <summary>
+            检查对象是否为null问题
+            </summary>
+            <param name="obj">Null：true</param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.IsNumeric(System.Object)">
+            <summary>
+            判断对象是否为Int32类型的数字
+            </summary>
+            <param name="expression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.IsNumeric(System.String)">
+            <summary>
+            判断对象是否为Int32类型的数字
+            </summary>
+            <param name="expression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.IsInt(System.String)">
+            <summary>
+            判断给定的字符串(strInt)是否是数值型
+            </summary>
+            <param name="strInt">要确认的字符串</param>
+            <returns>是则返加true 不是则返回 false</returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.IsDouble(System.Object)">
+            <summary>
+            是否为Double类型
+            </summary>
+            <param name="expression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.IsValidEmail(System.String)">
+            <summary>
+            检测是否符合email格式
+            </summary>
+            <param name="strEmail">要判断的email字符串</param>
+            <returns>判断结果</returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.IsValidDoEmail(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="strEmail"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.IsEmail(System.String)">
+            <summary>
+            检测是否符合email格式
+            </summary>
+            <param name="strEmail">要判断的email字符串</param>
+            <returns>判断结果</returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.IsURL(System.String)">
+            <summary>
+            检测是否是正确的Url
+            </summary>
+            <param name="strUrl">要验证的Url</param>
+            <returns>判断结果</returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.IsHttpUrl(System.String)">
+            <summary>
+            是否为httpUrl地址
+            </summary>
+            <param name="httpUrl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.IsIP(System.String)">
+            <summary>
+            是否为ip
+            </summary>
+            <param name="ip"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.IsData(System.String)">
+            <summary>
+             判断字符串是否合法的日期格式
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.GetStrArray(System.String)">
+            <summary>
+            将字符串转换为数组
+            </summary>
+            <param name="str">字符串</param>
+            <returns>字符串数组</returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.GetArrayStr(System.Collections.Generic.List{System.String},System.String)">
+            <summary>
+            将数组转换为字符串
+            </summary>
+            <param name="list">List</param>
+            <param name="speater">分隔符</param>
+            <returns>String</returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.ObjToBool(System.Object,System.Boolean)">
+            <summary>
+            object型转换为bool型
+            </summary>
+            <param name="expression">要转换的字符串</param>
+            <param name="defValue">缺省值</param>
+            <returns>转换后的bool类型结果</returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.StrToBool(System.String,System.Boolean)">
+            <summary>
+            string型转换为bool型
+            </summary>
+            <param name="expression">要转换的字符串</param>
+            <param name="defValue">缺省值</param>
+            <returns>转换后的bool类型结果</returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.ObjToInt(System.Object,System.Int32)">
+            <summary>
+            将对象转换为Int32类型
+            </summary>
+            <param name="expression">要转换的字符串</param>
+            <param name="defValue">缺省值</param>
+            <returns>转换后的int类型结果</returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.StrToInt(System.String,System.Int32)">
+            <summary>
+            将字符串转换为Int32类型
+            </summary>
+            <param name="expression">要转换的字符串</param>
+            <param name="defValue">缺省值</param>
+            <returns>转换后的int类型结果</returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.ObjToDecimal(System.Object,System.Decimal)">
+            <summary>
+            Object型转换为decimal型
+            </summary>
+            <param name="expression">要转换的字符串</param>
+            <param name="defValue">缺省值</param>
+            <returns>转换后的decimal类型结果</returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.StrToDecimal(System.String,System.Decimal)">
+            <summary>
+            string型转换为decimal型
+            </summary>
+            <param name="expression">要转换的字符串</param>
+            <param name="defValue">缺省值</param>
+            <returns>转换后的decimal类型结果</returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.ObjToFloat(System.Object,System.Single)">
+            <summary>
+            Object型转换为float型
+            </summary>
+            <param name="expression">要转换的字符串</param>
+            <param name="defValue">缺省值</param>
+            <returns>转换后的int类型结果</returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.StrToFloat(System.String,System.Single)">
+            <summary>
+            string型转换为float型
+            </summary>
+            <param name="expression">要转换的字符串</param>
+            <param name="defValue">缺省值</param>
+            <returns>转换后的int类型结果</returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.StrToDateTime(System.String,System.DateTime)">
+            <summary>
+            将对象转换为日期时间类型
+            </summary>
+            <param name="str">要转换的字符串</param>
+            <param name="defValue">缺省值</param>
+            <returns>转换后的int类型结果</returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.StrToDateTime(System.String)">
+            <summary>
+            将对象转换为日期时间类型
+            </summary>
+            <param name="str">要转换的字符串</param>
+            <returns>转换后的int类型结果</returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.ObjectToDateTime(System.Object)">
+            <summary>
+            将对象转换为日期时间类型
+            </summary>
+            <param name="obj">要转换的对象</param>
+            <returns>转换后的int类型结果</returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.ObjectToDateTime(System.Object,System.DateTime)">
+            <summary>
+            将对象转换为日期时间类型
+            </summary>
+            <param name="obj">要转换的对象</param>
+            <param name="defValue">缺省值</param>
+            <returns>转换后的int类型结果</returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.DateToChineseString(System.DateTime)">
+            <summary>
+            将时间换成中文
+            </summary>
+            <param name="datetime">时间</param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.ObjectToStr(System.Object)">
+            <summary>
+            将对象转换为字符串
+            </summary>
+            <param name="obj">要转换的对象</param>
+            <returns>转换后的string类型结果</returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.StringToBase64(System.String)">
+            <summary>
+            将字符串转化为Base64
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.Base64ToString(System.String)">
+            <summary>
+            将Base64转化为字符串
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.ObjectToInt(System.Object)">
+            <summary>
+            将对象转换为Int32类型 转换失败 默认值为0
+            </summary>
+            <param name="expression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.ObjectToInt(System.Object,System.Int32)">
+            <summary>
+            将对象转换为Int32类型
+            </summary>
+            <param name="expression"></param>
+            <param name="defValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.StringToInt(System.String,System.Int32)">
+            <summary>
+            string型转换为int型,转换失败返回缺省值
+            </summary>
+            <param name="str">要转换的字符串</param>
+            <param name="def">缺省值</param>
+            <returns>转换后的int类型结果</returns>
+        </member>
+        <member name="F:VTS.Common.VTSCommon._memoryInfo">
+            <summary>
+            使用内存大小
+            </summary>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.GlobalMemoryStatus(VTS.Common.VTSCommon.MEMORY_INFO@)">
+            <summary>
+            
+            </summary>
+            <param name="meminfo"></param>
+        </member>
+        <member name="M:VTS.Common.VTSCommon.GetSystemInfo">
+            <summary>
+            获取内存大小
+            </summary>
+        </member>
+        <member name="P:VTS.Common.VTSCommon.MemoryInfo">
+            <summary>
+            内存信息
+            </summary>
+        </member>
+        <member name="T:VTS.Common.VTSCommon.MEMORY_INFO">
+            <summary>
+            定义内存的信息结构
+            </summary>
+        </member>
+        <member name="F:VTS.Common.VTSCommon.MEMORY_INFO.dwLength">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:VTS.Common.VTSCommon.MEMORY_INFO.dwMemoryLoad">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:VTS.Common.VTSCommon.MEMORY_INFO.dwTotalPhys">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:VTS.Common.VTSCommon.MEMORY_INFO.dwAvailPhys">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:VTS.Common.VTSCommon.MEMORY_INFO.dwTotalPageFile">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:VTS.Common.VTSCommon.MEMORY_INFO.dwAvailPageFile">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:VTS.Common.VTSCommon.MEMORY_INFO.dwTotalVirtual">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:VTS.Common.VTSCommon.MEMORY_INFO.dwAvailVirtual">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:VTS.Common.CSVHelper">
+            <summary>
+            CSV数据处理助手
+            </summary>
+        </member>
+        <member name="F:VTS.Common.CSVHelper._dataSource">
+            <summary>
+            数据源
+            </summary>
+        </member>
+        <member name="F:VTS.Common.CSVHelper._titles">
+            <summary>
+            列标题
+            </summary>
+        </member>
+        <member name="F:VTS.Common.CSVHelper._fields">
+            <summary>
+            字段名
+            </summary>
+        </member>
+        <member name="M:VTS.Common.CSVHelper.#ctor">
+            <summary> 
+            构造函数 
+            </summary> 
+        </member>
+        <member name="M:VTS.Common.CSVHelper.#ctor(System.String[],System.String[],System.Data.DataTable)">
+            <summary> 
+            构造函数 
+            </summary> 
+            <param name="titles">要输出到 Excel 的列标题的数组</param> 
+            <param name="fields">要输出到 Excel 的字段名称数组</param> 
+            <param name="dataSource">数据源</param> 
+        </member>
+        <member name="M:VTS.Common.CSVHelper.#ctor(System.String[],System.Data.DataTable)">
+            <summary> 
+            构造函数 
+            </summary> 
+            <param name="titles">要输出到 Excel 的列标题的数组</param> 
+            <param name="dataSource">数据源</param> 
+        </member>
+        <member name="M:VTS.Common.CSVHelper.#ctor(System.Data.DataTable)">
+            <summary> 
+            构造函数 
+            </summary> 
+            <param name="dataSource">数据源</param> 
+        </member>
+        <member name="M:VTS.Common.CSVHelper.DataToCSV(System.String)">
+            <summary>
+            导出到CSV文件并且提示下载
+            </summary>
+            <param name="fileName"></param>
+        </member>
+        <member name="M:VTS.Common.CSVHelper.GetCsvData(System.String,System.String)">
+            <summary>
+            获取CSV导入的数据
+            </summary>
+            <param name="filePath">文件路径</param>
+            <param name="fileName">文件名称(.csv不用加)</param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.CSVHelper.ExportCSV">
+            <summary>
+            返回写入CSV的字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:VTS.Common.VTSMail">
+            <summary>
+            简单邮件发送
+            </summary>
+        </member>
+        <member name="M:VTS.Common.VTSMail.SendMail(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            发送电子邮件
+            </summary>
+            <param name="smtpserver">SMTP服务器</param>
+            
+            <param name="userName">登录帐号</param>
+            <param name="pwd">登录密码</param>
+            
+            <param name="nickName">发件人昵称</param>
+            <param name="strfrom">发件人</param>
+            
+            <param name="strto">收件人</param>
+            <param name="subj">主题</param>
+            <param name="bodys">内容</param>
+        </member>
+        <member name="T:VTS.Common.DESEncrypt">
+            <summary>
+            DES加密/解密类。
+            </summary>
+        </member>
+        <member name="F:VTS.Common.DESEncrypt.MisKey1">
+            <summary>
+            同步B2c信用卡加密key
+            </summary>
+        </member>
+        <member name="F:VTS.Common.DESEncrypt.MisKey2">
+            <summary>
+            加密Key2
+            </summary>
+        </member>
+        <member name="F:VTS.Common.DESEncrypt.MisKey3">
+            <summary>
+            加密Key3
+            </summary>
+        </member>
+        <member name="F:VTS.Common.DESEncrypt.MisKey4">
+            <summary>
+            通信加密key
+            </summary>
+        </member>
+        <member name="F:VTS.Common.DESEncrypt.MisKey5">
+            <summary>
+            我自己加密的CartdKey
+            </summary>
+        </member>
+        <member name="M:VTS.Common.DESEncrypt.Encrypt(System.String)">
+            <summary>
+            加密
+            </summary>
+            <param name="Text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.DESEncrypt.Encrypt(System.String,System.String)">
+            <summary> 
+            加密数据 
+            </summary> 
+            <param name="Text">要加密的字符串</param> 
+            <param name="sKey">key</param> 
+            <returns></returns> 
+        </member>
+        <member name="M:VTS.Common.DESEncrypt.Decrypt(System.String)">
+            <summary>
+            解密
+            </summary>
+            <param name="Text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.DESEncrypt.Decrypt(System.String,System.String)">
+            <summary> 
+            解密数据 
+            </summary> 
+            <param name="Text"></param> 
+            <param name="sKey"></param> 
+            <returns></returns> 
+        </member>
+        <member name="T:VTS.Common.MD5Encrypt">
+            <summary>
+            MD5加密类
+            </summary>
+        </member>
+        <member name="M:VTS.Common.MD5Encrypt.DataToMD5(System.String)">
+            <summary>
+            取得MD5加密串 不限制某一个.NET版本
+            </summary>
+            <param name="input">源明文字符串</param>
+            <returns>密文字符串</returns>
+        </member>
+        <member name="M:VTS.Common.MD5Encrypt.DataToMd5(System.String)">
+            <summary>
+            MD5加密函数
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="T:VTS.Common.SHAEncrypt">
+            <summary>
+            SHA加密类
+            </summary>
+        </member>
+        <member name="M:VTS.Common.SHAEncrypt.DataToSHA256(System.String)">
+            <summary>
+            正宗SHA256加密 【.net3.5下才有效】
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="T:VTS.Common.MD5SHA1FileHelper">
+            <summary>
+            计算结果和好压一样
+            </summary>
+        </member>
+        <member name="M:VTS.Common.MD5SHA1FileHelper.MD5File(System.String)">
+            <summary>
+            计算文件的 MD5 值
+            </summary>
+            <param name="fileName">要计算 MD5 值的文件名和路径</param>
+            <returns>MD5 值16进制字符串</returns>
+        </member>
+        <member name="M:VTS.Common.MD5SHA1FileHelper.SHA1File(System.String)">
+            <summary>
+            计算文件的 sha1 值
+            </summary>
+            <param name="fileName">要计算 sha1 值的文件名和路径</param>
+            <returns>sha1 值16进制字符串</returns>
+        </member>
+        <member name="M:VTS.Common.MD5SHA1FileHelper.HashFile(System.String,System.String)">
+            <summary>
+            计算文件的哈希值
+            </summary>
+            <param name="fileName">要计算哈希值的文件名和路径</param>
+            <param name="algName">算法:sha1,md5</param>
+            <returns>哈希值16进制字符串</returns>
+        </member>
+        <member name="M:VTS.Common.MD5SHA1FileHelper.HashData(System.IO.Stream,System.String)">
+            <summary>
+            计算哈希值
+            </summary>
+            <param name="stream">要计算哈希值的 Stream</param>
+            <param name="algName">算法:sha1,md5</param>
+            <returns>哈希值字节数组</returns>
+        </member>
+        <member name="M:VTS.Common.MD5SHA1FileHelper.ByteArrayToHexString(System.Byte[])">
+            <summary>
+            字节数组转换为16进制表示的字符串
+            </summary>
+        </member>
+        <member name="T:VTS.Common.NetHelper">
+            <summary>
+            网络工具类
+            </summary>
+        </member>
+        <member name="F:VTS.Common.NetHelper.GoogleUserAgent">
+            <summary>
+            谷歌
+            </summary>
+        </member>
+        <member name="F:VTS.Common.NetHelper.FirefoxUserAgent">
+            <summary>
+            火狐
+            </summary>
+        </member>
+        <member name="M:VTS.Common.NetHelper.GetHttpStatusCode(System.String)">
+            <summary>
+            获取请求的状态码
+            </summary>
+            <param name="url">请求的url</param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.NetHelper.RequestGet(System.String,System.Net.CookieCollection,System.Int32)">
+            <summary>
+            HTTP GET方式提交数据
+            </summary>
+            <param name="TheURL">提交的URL</param>
+            <param name="cookies">cookie</param>
+            <param name="type">0 表示获取源代码 1表示获取状态码</param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.NetHelper.HttpPost(System.String,System.String)">
+            <summary>
+            HTTP POST方式请求数据
+            </summary>
+            <param name="url">URL.</param>
+            <param name="param">POST的数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.NetHelper.HttpGet(System.String,System.Boolean)">
+            <summary>
+            HTTP GET方式请求数据
+            </summary>
+            <param name="url"></param>
+            <param name="isurlencoded"></param>
+            <returns></returns>
+        </member>
+        <member name="T:VTS.Common.HttpWebResponseUtility">
+            <summary> 
+            有关HTTP请求的辅助类 
+            </summary> 
+        </member>
+        <member name="F:VTS.Common.HttpWebResponseUtility.DefaultUserAgent">
+            <summary>
+            DefaultUserAgent
+            </summary>
+        </member>
+        <member name="M:VTS.Common.HttpWebResponseUtility.CreateGetHttpResponse(System.String,System.Nullable{System.Int32},System.String,System.Net.CookieCollection)">
+            <summary> 
+            创建GET方式的HTTP请求 
+            </summary> 
+            <param name="url">请求的URL</param> 
+            <param name="timeout">请求的超时时间</param> 
+            <param name="userAgent">请求的客户端浏览器信息，可以为空</param> 
+            <param name="cookies">随同HTTP请求发送的Cookie信息，如果不需要身份验证可以为空</param> 
+            <returns></returns> 
+        </member>
+        <member name="M:VTS.Common.HttpWebResponseUtility.CreatePostHttpResponse(System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.Nullable{System.Int32},System.String,System.Text.Encoding,System.Net.CookieContainer)">
+            <summary> 
+            创建POST方式的HTTP请求 
+            </summary> 
+            <param name="url">请求的URL</param> 
+            <param name="parameters">随同请求POST的参数名称及参数值字典</param> 
+            <param name="timeout">请求的超时时间</param> 
+            <param name="userAgent">请求的客户端浏览器信息，可以为空</param> 
+            <param name="requestEncoding">发送HTTP请求时所用的编码</param> 
+            <param name="cookies">随同HTTP请求发送的Cookie信息，如果不需要身份验证可以为空</param> 
+            <returns></returns> 
+        </member>
+        <member name="M:VTS.Common.HttpWebResponseUtility.CheckValidationResult(System.Object,System.Security.Cryptography.X509Certificates.X509Certificate,System.Security.Cryptography.X509Certificates.X509Chain,System.Net.Security.SslPolicyErrors)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="certificate"></param>
+            <param name="chain"></param>
+            <param name="errors"></param>
+            <returns></returns>
+        </member>
+        <member name="T:VTS.Common.PagingMSSQLHelper">
+            <summary>  
+            双TOP二分法生成分页SQL类(支持MSSQL、ACCESS)
+            </summary>  
+        </member>
+        <member name="M:VTS.Common.PagingMSSQLHelper.CreatePagingSql(System.Int32,System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            获取分页SQL语句，排序字段需要构成唯一记录
+            </summary>
+            <param name="_recordCount">记录总数</param>
+            <param name="_pageSize">每页记录数</param>
+            <param name="_pageIndex">当前页数</param>
+            <param name="_safeSql">SQL查询语句</param>
+            <param name="_orderField">排序字段，多个则用“,”隔开</param>
+            <returns>分页SQL语句</returns>
+        </member>
+        <member name="M:VTS.Common.PagingMSSQLHelper.CreateTopnSql(System.Int32,System.String)">
+            <summary>
+            获取记录总数SQL语句
+            </summary>
+            <param name="_n">限定记录数</param>
+            <param name="_safeSql">SQL查询语句</param>
+            <returns>记录总数SQL语句</returns>
+        </member>
+        <member name="M:VTS.Common.PagingMSSQLHelper.CreateCountingSql(System.String)">
+            <summary>
+            获取记录总数SQL语句
+            </summary>
+            <param name="_safeSql">SQL查询语句</param>
+            <returns>记录总数SQL语句</returns>
+        </member>
+        <member name="T:VTS.Common.PagingSQLiteHelper">
+            <summary>
+            支持SQLite的分页算法
+            </summary>
+        </member>
+        <member name="M:VTS.Common.PagingSQLiteHelper.CreatePagingSql(System.Int32,System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            获取分页SQL语句，排序字段需要构成唯一记录
+            </summary>
+            <param name="_recordCount">记录总数</param>
+            <param name="_pageSize">每页记录数</param>
+            <param name="_pageIndex">当前页数</param>
+            <param name="_safeSql">SQL查询语句</param>
+            <param name="_orderField">排序字段，多个则用“,”隔开</param>
+            <returns>分页SQL语句</returns>
+        </member>
+        <member name="M:VTS.Common.PagingSQLiteHelper.CreateCountingSql(System.String)">
+            <summary>
+            获取记录总数SQL语句
+            </summary>
+            <param name="_safeSql">SQL查询语句</param>
+            <returns>记录总数SQL语句</returns>
+        </member>
+        <member name="T:VTS.Common.SerializationHelper">
+            <summary>
+            序列化助手
+            </summary>
+        </member>
+        <member name="M:VTS.Common.SerializationHelper.Serialize(System.Object)">
+            <summary>
+            序列化：将一个对象序列化成字符串
+            </summary>
+            <param name="obj">对象</param>
+            <returns>xml字符串</returns>
+        </member>
+        <member name="M:VTS.Common.SerializationHelper.DeSerialize(System.Type,System.String)">
+            <summary>
+            反序列化：讲一个字符串变成一个对象
+            </summary>
+            <param name="type">对象的类型</param>
+            <param name="s">字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.SerializationHelper.Load(System.Type,System.String)">
+            <summary>
+            反序列化
+            </summary>
+            <param name="type">对象类型</param>
+            <param name="filename">文件路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.SerializationHelper.Save(System.Object,System.String)">
+            <summary>
+            序列化
+            </summary>
+            <param name="obj">对象</param>
+            <param name="filename">文件路径</param>
+        </member>
+        <member name="T:VTS.Common.Thumbnail">
+            <summary>
+            Thumbnail 的摘要说明。
+            </summary>
+        </member>
+        <member name="F:VTS.Common.Thumbnail.srcImage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:VTS.Common.Thumbnail.srcFileName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:VTS.Common.Thumbnail.SetImage(System.String)">
+            <summary>
+            创建
+            </summary>
+            <param name="FilePath">原始图片路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.Thumbnail.ThumbnailCallback">
+            <summary>
+            回调
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.Thumbnail.GetImage(System.Int32,System.Int32)">
+            <summary>
+            生成缩略图,返回缩略图的Image对象
+            </summary>
+            <param name="Width">缩略图宽度</param>
+            <param name="Height">缩略图高度</param>
+            <returns>缩略图的Image对象</returns>
+        </member>
+        <member name="M:VTS.Common.Thumbnail.SaveThumbnailImage(System.Int32,System.Int32)">
+            <summary>
+            保存缩略图
+            </summary>
+            <param name="Width"></param>
+            <param name="Height"></param>
+        </member>
+        <member name="M:VTS.Common.Thumbnail.SaveImage(System.Int32,System.Int32,System.Drawing.Imaging.ImageFormat)">
+            <summary>
+            生成缩略图并保存
+            </summary>
+            <param name="Width">缩略图的宽度</param>
+            <param name="Height">缩略图的高度</param>
+            <param name="imgformat">保存的图像格式</param>
+            <returns>缩略图的Image对象</returns>
+        </member>
+        <member name="M:VTS.Common.Thumbnail.SaveImage(System.Drawing.Image,System.String,System.Drawing.Imaging.ImageCodecInfo)">
+            <summary>
+            保存图片
+            </summary>
+            <param name="image">Image 对象</param>
+            <param name="savePath">保存路径</param>
+            <param name="ici">指定格式的编解码参数</param>
+        </member>
+        <member name="M:VTS.Common.Thumbnail.GetCodecInfo(System.String)">
+            <summary>
+            获取图像编码解码器的所有相关信息
+            </summary>
+            <param name="mimeType">包含编码解码器的多用途网际邮件扩充协议 (MIME) 类型的字符串</param>
+            <returns>返回图像编码解码器的所有相关信息</returns>
+        </member>
+        <member name="M:VTS.Common.Thumbnail.ResizeImage(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            计算新尺寸
+            </summary>
+            <param name="width">原始宽度</param>
+            <param name="height">原始高度</param>
+            <param name="maxWidth">最大新宽度</param>
+            <param name="maxHeight">最大新高度</param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.Thumbnail.GetFormat(System.String)">
+            <summary>
+            得到图片格式
+            </summary>
+            <param name="name">文件名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.Thumbnail.MakeSquareImage(System.Drawing.Image,System.String,System.Int32)">
+            <summary>
+            制作小正方形
+            </summary>
+            <param name="image">图片对象</param>
+            <param name="newFileName">新地址</param>
+            <param name="newSize">长度或宽度</param>
+        </member>
+        <member name="M:VTS.Common.Thumbnail.MakeSquareImage(System.String,System.String,System.Int32)">
+            <summary>
+            制作小正方形
+            </summary>
+            <param name="fileName">图片文件名</param>
+            <param name="newFileName">新地址</param>
+            <param name="newSize">长度或宽度</param>
+        </member>
+        <member name="M:VTS.Common.Thumbnail.MakeRemoteSquareImage(System.String,System.String,System.Int32)">
+            <summary>
+            制作远程小正方形
+            </summary>
+            <param name="url">图片url</param>
+            <param name="newFileName">新地址</param>
+            <param name="newSize">长度或宽度</param>
+        </member>
+        <member name="M:VTS.Common.Thumbnail.MakeRemoteThumbnailImage(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            制作远程缩略图
+            </summary>
+            <param name="url">图片URL</param>
+            <param name="newFileName">新图路径</param>
+            <param name="maxWidth">最大宽度</param>
+            <param name="maxHeight">最大高度</param>
+        </member>
+        <member name="M:VTS.Common.Thumbnail.MakeRemoteThumbnailImage(System.String,System.String,System.Int32,System.Int32,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="url"></param>
+            <param name="newFileName"></param>
+            <param name="maxWidth"></param>
+            <param name="maxHeight"></param>
+            <param name="mode"></param>
+        </member>
+        <member name="M:VTS.Common.Thumbnail.GetRemoteImage(System.String)">
+            <summary>
+            获取图片流
+            </summary>
+            <param name="url">图片URL</param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.Thumbnail.MakeThumbnailImage(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            制作缩略图 支持覆盖
+            </summary>
+            <param name="fileName">绝对文件路径</param>
+            <param name="newFileName">新图路径</param>
+            <param name="maxWidth">最大宽度</param>
+            <param name="maxHeight">最大高度</param>
+        </member>
+        <member name="M:VTS.Common.Thumbnail.MakeThumbnailImage(System.Drawing.Image,System.String,System.Int32,System.Int32)">
+            <summary>
+            制作缩略图
+            </summary>
+            <param name="original">图片对象</param>
+            <param name="newFileName">新图路径</param>
+            <param name="maxWidth">最大宽度[]</param>
+            <param name="maxHeight">最大高度</param>
+        </member>
+        <member name="M:VTS.Common.Thumbnail.MakeThumbnailImage(System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            裁剪图片并保存
+            </summary>
+            <param name="fileName">源图路径（绝对路径）</param>
+            <param name="newFileName">缩略图路径（绝对路径）</param>
+            <param name="maxWidth">缩略图宽度</param>
+            <param name="maxHeight">缩略图高度</param>
+            <param name="cropWidth">裁剪宽度</param>
+            <param name="cropHeight">裁剪高度</param>
+            <param name="X">X轴</param>
+            <param name="Y">Y轴</param>
+        </member>
+        <member name="M:VTS.Common.Thumbnail.MakeThumbnailImage(System.String,System.String,System.Int32,System.Int32,System.String)">
+            <summary>
+            生成缩略图
+            </summary>
+            <param name="fileName">源图路径（绝对路径）</param>
+            <param name="newFileName">缩略图路径（绝对路径）</param>
+            <param name="width">缩略图宽度</param>
+            <param name="height">缩略图高度</param>
+            <param name="mode">生成缩略图的方式</param>    
+        </member>
+        <member name="M:VTS.Common.Thumbnail.MakeThumbnailImage(System.Drawing.Image,System.String,System.Int32,System.Int32,System.String)">
+            <summary>
+            生成缩略图
+            </summary>
+            <param name="original"></param>
+            <param name="newFileName"></param>
+            <param name="width"></param>
+            <param name="height"></param>
+            <param name="mode"></param>
+        </member>
+        <member name="T:VTS.Common.WaterMark">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:VTS.Common.WaterMark.AddImageSignPic(System.String,System.String,System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            图片水印
+            </summary>
+            <param name="imgpath">图片物理路径</param>
+            <param name="savepath">保存地址路径</param>
+            <param name="watermarkFilePath">水印物理路劲</param>
+            <param name="watermarkStatus">图片水印位置 0=不使用 1=左上 2=中上 3=右上 4=左中  9=右下</param>
+            <param name="quality">附加水印图片质量,0-100</param>
+            <param name="watermarkTransparency">水印的透明度 1--10 10为不透明</param>
+        </member>
+        <member name="M:VTS.Common.WaterMark.AddImageSignText(System.String,System.String,System.String,System.Int32,System.Int32,System.String,System.Int32)">
+            <summary>
+            文字水印
+            </summary>
+            <param name="imgpath">文件物理路径</param>
+            <param name="savepath">保存的物理路径</param>
+            <param name="watermarkText">水印文字</param>
+            <param name="watermarkStatus">图片水印位置 0=不使用 1=左上 2=中上 3=右上 4=左中  9=右下</param>
+            <param name="quality">附加水印图片质量,0-100</param>
+            <param name="fontname">字体</param>
+            <param name="fontsize">字体大小</param>
+        </member>
+        <member name="T:VTS.Common.XmlHelper">
+            <summary>
+            XML文档操作助手
+            </summary>
+        </member>
+        <member name="M:VTS.Common.XmlHelper.AppendChild(System.String,System.String,System.Xml.XmlNode)">
+            <summary>
+            追加节点
+            </summary>
+            <param name="filePath">XML文档绝对路径</param>
+            <param name="xPath">范例: @"Skill/First/SkillItem"</param>
+            <param name="xmlNode">XmlNode节点</param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.XmlHelper.AppendChild(System.String,System.String,System.String,System.String)">
+            <summary>
+            从XML文档中读取节点追加到另一个XML文档中
+            </summary>
+            <param name="filePath">需要读取的XML文档绝对路径</param>
+            <param name="xPath">范例: @"Skill/First/SkillItem"</param>
+            <param name="toFilePath">被追加节点的XML文档绝对路径</param>
+            <param name="toXPath">范例: @"Skill/First/SkillItem"</param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.XmlHelper.UpdateNodeInnerText(System.String,System.String,System.String)">
+            <summary>
+            修改节点的InnerText的值
+            </summary>
+            <param name="filePath">XML文件绝对路径</param>
+            <param name="xPath">范例: @"Skill/First/SkillItem"</param>
+            <param name="value">节点的值</param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.XmlHelper.LoadXmlDoc(System.String)">
+            <summary>
+            读取XML文档
+            </summary>
+            <param name="filePath">XML文件绝对路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.XmlHelper.ReadNodes(System.String,System.String)">
+            <summary>
+            读取XML的所有子节点
+            </summary>
+            <param name="filePath">XML文件的绝对路径</param>
+            <param name="xPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.XmlHelper.InsertXmlNode(System.String,System.String,System.String)">
+            <summary>
+            增
+            </summary>
+            <param name="urlFilePath"></param>
+            <param name="key"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.XmlHelper.RemoveXmlNode(System.String,System.String)">
+            <summary>
+            删除key
+            </summary>
+            <param name="urlFilePath"></param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.XmlHelper.GetXmlNode(System.String,System.String)">
+            <summary>
+            查 
+            </summary>
+            <param name="filePath"></param>
+            <param name="xPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.XmlHelper.GetXmlNode(System.String,System.String,System.String)">
+            <summary>
+            [比较笨拙]通过key 搜索指定的节点
+            </summary>
+            <param name="filePath"></param>
+            <param name="xPath"></param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="T:VTS.Common.XMLHelper">
+            <summary>
+            XML文档操作助手
+            </summary>
+        </member>
+        <member name="F:VTS.Common.XMLHelper.strXmlFile">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:VTS.Common.XMLHelper.xmlDoc">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:VTS.Common.XMLHelper.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="XmlFile"></param>
+        </member>
+        <member name="M:VTS.Common.XMLHelper.PrintElement">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:VTS.Common.XMLHelper.GetSingleNode(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="nodePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.XMLHelper.GetMultiNodes(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="nodePath"></param>
+            <param name="nodeName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.XMLHelper.GetMultiNodes(System.String,System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="nodePath"></param>
+            <param name="nodeName"></param>
+            <param name="attName"></param>
+            <param name="attValue"></param>
+            <returns></returns>
+        </member>
+        <member name="T:VTS.Common.ZipHtml">
+            <summary>
+            Zip页面压缩处理
+            </summary>
+        </member>
+        <member name="M:VTS.Common.ZipHtml.GZipHtml(System.String)">
+            <summary>
+            处理压缩html
+            </summary>
+            <param name="html"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VTS.Forms.Common</name>
+    </assembly>
+    <members>
+        <member name="T:VTS.Common.VTSFormsCommon">
+            <summary>
+            WinForms帮助
+            </summary>
+        </member>
+        <member name="M:VTS.Common.VTSFormsCommon.SetTip(System.Windows.Forms.Control,System.String)">
+            <summary>
+            设置页面按钮的提示情况
+            </summary>
+            <param name="cl"></param>
+            <param name="message"></param>
+        </member>
+        <member name="M:VTS.Common.VTSFormsCommon.GetFilePath(System.Windows.Forms.OpenFileDialog,System.String,System.String)">
+            <summary>
+            打开文件对话框
+            </summary>
+            <param name="ofdExcel">打开文件对话框实例</param>
+            <param name="strFilter">文件过滤器</param>
+            <param name="initPath">初始路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSFormsCommon.GetFileSavePath(System.String,System.Windows.Forms.SaveFileDialog,System.String)">
+            <summary>
+            根据保存对话框返回保存文件的地址
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSFormsCommon.LoadItemToCom(System.Object[],System.Windows.Forms.ComboBox)">
+            <summary>
+            向combox加载数据
+            </summary>
+            <param name="items">对象</param>
+            <param name="com">ComboBox控件</param>
+        </member>
+        <member name="M:VTS.Common.VTSFormsCommon.LoadItemToCom(System.String[],System.Windows.Forms.ComboBox)">
+            <summary>
+            
+            </summary>
+            <param name="items"></param>
+            <param name="com"></param>
+        </member>
+        <member name="M:VTS.Common.VTSFormsCommon.GetFloderSelected(System.Windows.Forms.FolderBrowserDialog)">
+            <summary>
+            文件夹设置函数
+            </summary>
+            <param name="fbd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSFormsCommon.InitDataGridView(System.Windows.Forms.DataGridView)">
+            <summary>
+            初始化DataGirdView
+            </summary>
+            <param name="dgv"></param>
+        </member>
+        <member name="M:VTS.Common.VTSFormsCommon.CheckTextBox(System.Windows.Forms.TextBox[])">
+            <summary>
+            检查TextBox
+            </summary>
+            <param name="arrTxt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VTS.Common.VTSFormsCommon.SetColor(System.Drawing.Color,System.Windows.Forms.TextBox[])">
+            <summary>
+            为控件设置背景色
+            </summary>
+            <param name="color"></param>
+            <param name="arr"></param>
+        </member>
+    </members>
+</doc>
